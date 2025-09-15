@@ -17,6 +17,6 @@ Dame un código dividido en index.html. style.css y script.js para hacer hacer l
    
 Hazlo más estético, mejora los elementos visuales
 
-4. Ultimo prompt
+3. Ultimo prompt
    
 Agrega arriba de cada color los deslizadores para cambiar la intensidad y su significado de cada color de la bandera.
