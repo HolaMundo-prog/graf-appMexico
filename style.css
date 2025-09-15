@@ -1,0 +1,210 @@
+:root {
+    --green: #01925ad0;
+    --white: #ffffff;
+    --red: #fc0505;
+    --flag-width: 840px;
+    --flag-height: 480px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: "Segoe UI", Inter, Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 24px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #eceff1 100%);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.topbar {
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #044
+}
+
+.topbar .subtitle {
+    margin: 6px 0 0;
+    color: #555;
+    font-size: 1rem
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px
+}
+
+
+.flag-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.flag {
+    width: min(var(--flag-width), 95vw);
+    height: calc(min(var(--flag-height), 95vw * 0.5714));
+    display: flex;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 8px solid #ddd;
+    position: relative;
+}
+
+.stripe {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: background 0.3s ease;
+    padding-top: 50px
+}
+
+
+.stripe-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 6px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+
+.stripe-controls label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 4px;
+    gap: 2px;
+    font-size: 0.8rem
+}
+
+.stripe-controls input[type=range] {
+    width: 80%;
+    cursor: pointer
+}
+
+.stripe-controls output {
+    font-weight: 700;
+    color: #111;
+    font-size: 0.8rem
+}
+
+
+.stripe-green {
+    background: var(--green)
+}
+
+.stripe-white {
+    background: var(--white)
+}
+
+.stripe-red {
+    background: var(--red)
+}
+
+
+.meaning {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333
+}
+
+
+.coat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    max-width: 280px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.coat img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+
+.controls {
+    width: 360px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    text-align: center
+}
+
+.actions button {
+    background: #006847;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s
+}
+
+.actions button:hover {
+    background: #004d34
+}
+
+
+.footer {
+    margin-top: 18px;
+    color: #666;
+    font-size: 0.85rem;
+    text-align: center
+}
+
+
+@media (max-width:900px) {
+    .flag {
+        flex-direction: column;
+        height: auto
+    }
+
+    .stripe {
+        flex: unset;
+        height: 200px
+    }
+
+    .coat {
+        width: 60%;
+    }
+}

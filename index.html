@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bandera de México — Interactivo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Bandera de México</h1>
+        <p class="subtitle">Ajusta la intensidad de los colores y contempla su significado</p>
+    </header>
+
+
+    <main class="main">
+        <section class="flag-wrapper">
+            <div class="flag" role="img" aria-label="Bandera de México" id="flag">
+                <!-- Verde -->
+                <div class="stripe stripe-green">
+                    <div class="stripe-controls">
+                        <div class="meaning">Esperanza · Independencia</div>
+                        <label>Verde
+                            <input id="greenRange" type="range" min="50" max="150" value="100" />
+                            <output id="greenVal">100%</output>
+                        </label>
+                    </div>
+                </div>
+
+
+                <!-- Blanco -->
+                <div class="stripe stripe-white">
+                    <div class="stripe-controls">
+                        <div class="meaning">Unidad · Paz</div>
+                        <label>Blanco
+                            <input id="whiteRange" type="range" min="50" max="150" value="100" />
+                            <output id="whiteVal">100%</output>
+                        </label>
+                    </div>
+                    <!-- Escudo oficial -->
+                    <div class="coat">
+                        <img src="img/escudo.png" alt="Escudo Nacional de México" />
+                    </div>
+                </div>
+
+
+                <!-- Rojo -->
+                <div class="stripe stripe-red">
+                    <div class="stripe-controls">
+                        <div class="meaning">Sangre de los héroes · Sacrificio</div>
+                        <label>Rojo
+                            <input id="redRange" type="range" min="50" max="150" value="100" />
+                            <output id="redVal">100%</output>
+                        </label>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="controls">
+            <div class="actions">
+                <button id="resetBtn">Restablecer Intensidades</button>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <small>24200293 - Angel Giovanni Budar Solano --------------</small>
+        <small>Representación estilizada de la Bandera Nacional de México — con fines educativos.</small>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
